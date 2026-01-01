@@ -1,7 +1,5 @@
 # enabera.github.io
 
-# enakshibera.github.io
-
 This repository hosts my personal academic website using GitHub Pages.
 
 The purpose of this repository is **infrastructure**, not research content or code.
