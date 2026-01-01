@@ -82,3 +82,17 @@ nav a:hover {
   margin-bottom: 5px;
 }
 
+
+.teaching-block {
+  margin-bottom: 40px;
+}
+
+.teaching-block h2 {
+  margin-bottom: 5px;
+}
+
+.teaching-block ul {
+  margin-top: 10px;
+}
+
+
