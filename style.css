@@ -65,3 +65,20 @@ nav a:hover {
   font-size: 1.1em;
   line-height: 1.6;
 }
+
+
+.page {
+  max-width: 800px;
+  margin: 60px auto;
+  font-family: serif;
+  line-height: 1.6;
+}
+
+.research-item {
+  margin-bottom: 40px;
+}
+
+.research-item h2 {
+  margin-bottom: 5px;
+}
+
