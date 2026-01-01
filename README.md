@@ -1,4 +1,4 @@
-# enabera.github.io
+# enakshibera.github.io
 
 This repository hosts my personal academic website using GitHub Pages.
 
