@@ -23,15 +23,18 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.hero {
-  background-image: url('sunset_1.jpg');
+/* Background block */
+.hero{
+  height: 200px;                 /* was too tall; try 220–280 */
+  background-image: url("sunset_1.jpg"); /* or hero.jpg — use your actual file */
   background-size: cover;
-  background-position: center;
-  height: 60vh;
+  background-position: center 35%; /* shifts crop upward a bit */
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 
 .hero h1 {
   color: white;
@@ -67,12 +70,13 @@ nav a:hover {
 }
 
 
-.page {
-  max-width: 800px;
-  margin: 60px auto;
-  font-family: serif;
+.page{
+  max-width: 900px;
+  margin: 28px auto;    /* was likely huge */
+  padding: 0 18px;
   line-height: 1.6;
 }
+
 
 .research-item {
   margin-bottom: 40px;
@@ -96,3 +100,6 @@ nav a:hover {
 }
 
 
+.teaching-block, .research-item, .bio-container{
+  margin-bottom: 22px;
+}
