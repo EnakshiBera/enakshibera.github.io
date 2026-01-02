@@ -1,4 +1,7 @@
-body, html {
+/* =========================
+   Global
+========================= */
+html, body {
   margin: 0;
   padding: 0;
   font-family: Georgia, serif;
@@ -6,6 +9,9 @@ body, html {
   background-color: #fff;
 }
 
+/* =========================
+   Navigation
+========================= */
 nav {
   background-color: #222;
   padding: 10px 20px;
@@ -23,72 +29,87 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Background block */
-.hero{
-  height: 200px;                 /* was too tall; try 220–280 */
-  background-image: url("sunset_2.jpg"); /* or hero.jpg — use your actual file */
+/* =========================
+   Hero (Homepage background)
+========================= */
+.hero {
+  height: 200px; /* reduce this if it still feels big (try 180–220) */
+  background-image: url("sunset_2.jpg"); /* change to sunset_1.jpg or hero.jpg if needed */
   background-size: cover;
-  background-position: center 35%; /* shifts crop upward a bit */
+  background-position: center 35%;
   background-repeat: no-repeat;
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
 .hero h1 {
-  color: white;
+  color: #fff;
   font-size: 3.5em;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  margin: 0;
 }
 
+/* =========================
+   Homepage Bio section
+========================= */
 .bio {
-  padding: 60px 20px;
+  padding: 28px 20px; /* was 60px; this reduces empty space */
 }
 
 .bio-container {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
-  max-width: 100%;
-  margin: auto;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .bio-photo {
-  width: 240px;
+  width: 240px;          /* make image bigger */
+  max-width: 100%;
   border-radius: 4px;
   margin-right: 30px;
 }
 
 .bio-text {
   flex: 1;
+  min-width: 260px;
 }
 
 .bio-text p {
   font-size: 1.1em;
   line-height: 1.6;
+  margin-top: 0;
 }
 
-
-.page{
+/* =========================
+   Inner pages (Research/Teaching/CV)
+========================= */
+.page {
   max-width: 900px;
-  margin: 28px auto;    /* was likely huge */
+  margin: 28px auto;
   padding: 0 18px;
   line-height: 1.6;
 }
 
-
+/* =========================
+   Research page
+========================= */
 .research-item {
-  margin-bottom: 40px;
+  margin-bottom: 22px;
 }
 
 .research-item h2 {
   margin-bottom: 5px;
 }
 
-
+/* =========================
+   Teaching page
+========================= */
 .teaching-block {
-  margin-bottom: 40px;
+  margin-bottom: 22px;
 }
 
 .teaching-block h2 {
@@ -99,7 +120,3 @@ nav a:hover {
   margin-top: 10px;
 }
 
-
-.teaching-block, .research-item, .bio-container{
-  margin-bottom: 22px;
-}
