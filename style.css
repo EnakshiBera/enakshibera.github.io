@@ -26,7 +26,7 @@ nav a:hover {
 /* Background block */
 .hero{
   height: 200px;                 /* was too tall; try 220–280 */
-  background-image: url("sunset_1.jpg"); /* or hero.jpg — use your actual file */
+  background-image: url("sunset_2.jpg"); /* or hero.jpg — use your actual file */
   background-size: cover;
   background-position: center 35%; /* shifts crop upward a bit */
   background-repeat: no-repeat;
