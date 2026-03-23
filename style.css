@@ -82,17 +82,9 @@ nav {
   align-items: flex-start;
 }
 
-.home-photo { width: 280px; flex-shrink: 0; }
-
-.home-photo img {
+.home-photo {
   width: 380px !important;
-  max-width: 380px !important;
-}
-
-.home-text p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  color: var(--text);
+  flex-shrink: 0 !important;
 }
 
 .home-text a { color: var(--text); text-decoration: underline; }
