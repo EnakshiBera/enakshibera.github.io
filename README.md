@@ -56,7 +56,7 @@ All research code and datasets live elsewhere.
 
 ### Images
 - `hero.jpg` / `sunset_*.jpg` — Homepage background  
-- `enakshi_new.jpg` / `profile.jpg` — Profile photo  
+- `headshot_enakshi.jpg` — Profile photo  
 
 ---
 
