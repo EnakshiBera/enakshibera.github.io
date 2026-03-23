@@ -85,9 +85,8 @@ nav {
 .home-photo { width: 280px; flex-shrink: 0; }
 
 .home-photo img {
-  width: 100%;
-  display: block;
-  border: 1px solid var(--border);
+  width: 280px !important;
+  max-width: 280px !important;
 }
 
 .home-text p {
