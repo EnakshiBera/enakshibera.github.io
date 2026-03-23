@@ -73,8 +73,6 @@ Example: Enakshi_CV.pdf ≠ enakshi_cv.pdf
 
 ## 5) Why “Commit changes” is IMPORTANT
 
-### Question: Why don’t my changes show up?
-**Answer:** Because you didn’t commit them.
 
 ### What a commit does
 - Saves your edits permanently
