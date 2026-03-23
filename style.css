@@ -89,11 +89,10 @@ nav {
 }
 
 .home-photo img {
-  width: 280px !important;
-  height: 480px !important;
-  max-width: 280px !important;
-  object-fit: cover !important;
-  object-position: top !important;
+  width: 380px !important;
+  height: auto !important;
+  max-width: 380px !important;
+  object-fit: unset !important;
   display: block !important;
   border: 1px solid var(--border) !important;
   border-radius: 0 !important;
