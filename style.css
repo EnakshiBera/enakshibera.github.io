@@ -1,122 +1,296 @@
-/* =========================
-   Global
-========================= */
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: Georgia, serif;
-  color: #333;
-  background-color: #fff;
+/* ============================================================
+   IMPORT FONTS from Google Fonts
+   - EB Garamond: used for body text, nav, paragraphs
+   - Cormorant Garamond: used for headings (your name, section titles)
+   Both are classic serif fonts common on academic econ websites
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cormorant+Garamond:wght@300;400;500&display=swap');
+
+/* ============================================================
+   CSS VARIABLES — change these to update colors site-wide.
+   --accent controls the navy blue used for links, section titles
+   --muted controls the grey used for subtitles, dates, descriptions
+   --border controls the light grey lines throughout
+   ============================================================ */
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #5a5a5a;
+  --accent: #1a3a5c;   /* navy blue — change this to change link/title color */
+  --border: #d8d8d8;   /* light grey lines */
 }
 
-/* =========================
-   Navigation
-========================= */
+/* ============================================================
+   RESET — removes default browser margin/padding and sets
+   box-sizing so padding doesn't expand element widths
+   ============================================================ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ============================================================
+   BODY — base font, size, line height for the whole site
+   Increase font-size here (e.g. 18px) to make everything bigger
+   ============================================================ */
+body {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* ============================================================
+   NAVIGATION BAR
+   - White background (replaces the old dark #222 bar)
+   - Sticky: stays at top when you scroll
+   - border-bottom: the thin grey line under the nav
+   To change nav link color, edit the color in nav a {}
+   ============================================================ */
 nav {
-  background-color: #222;
-  padding: 10px 20px;
+  position: sticky;     /* keeps nav fixed at top on scroll */
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  z-index: 100;         /* sits above all other content */
+  padding: 0.8rem 0;
   text-align: center;
 }
 
 nav a {
-  color: #f0f0f0;
   text-decoration: none;
-  margin: 0 15px;
-  font-size: 1em;
+  color: var(--muted);             /* grey by default */
+  font-size: 0.88rem;
+  letter-spacing: 0.1em;          /* spreads letters apart slightly */
+  text-transform: uppercase;       /* makes links all-caps */
+  margin: 0 1.4rem;
+  transition: color 0.2s;          /* smooth color change on hover */
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: var(--accent);            /* turns navy on hover */
 }
 
-/* =========================
-   Hero (Homepage background)
-========================= */
-.hero {
-  height: 200px; /* reduce this if it still feels big (try 180–220) */
-  background-image: url("sunset_2.jpg"); /* change to sunset_1.jpg or hero.jpg if needed */
-  background-size: cover;
-  background-position: center 35%;
-  background-repeat: no-repeat;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero h1 {
-  color: #fff;
-  font-size: 3.5em;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-  margin: 0;
-}
-
-/* =========================
-   Homepage Bio section
-========================= */
+/* ============================================================
+   HOMEPAGE BIO SECTION
+   This replaces the old .hero + .bio structure.
+   No more sunset banner — just white space and clean layout.
+   max-width controls how wide the content gets on large screens
+   ============================================================ */
 .bio {
-  padding: 28px 20px; /* was 60px; this reduces empty space */
+  max-width: 760px;      /* content won't stretch wider than this */
+  margin: 0 auto;        /* centers the content horizontally */
+  padding: 3rem 2rem;    /* top/bottom and left/right padding */
 }
 
+/* Flex row: photo on left, text on right */
 .bio-container {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 900px;
-  margin: 0 auto;
+  gap: 2.8rem;           /* space between photo and text */
+  align-items: flex-start;
 }
 
+/* ============================================================
+   PROFILE PHOTO
+   - border-radius: 50% makes it a circle
+   - Change width/height to resize the photo
+   - Remove border-radius to go back to a square/rectangle
+   ============================================================ */
 .bio-photo {
-  width: 240px;          /* make image bigger */
-  max-width: 100%;
-  border-radius: 4px;
-  margin-right: 30px;
+  width: 155px;
+  height: 155px;
+  object-fit: cover;      /* crops image to fill the circle */
+  border-radius: 50%;     /* makes it circular — remove for rectangle */
+  border: 1px solid var(--border);
+  flex-shrink: 0;         /* stops photo from shrinking on small screens */
+  filter: grayscale(8%);  /* very slight desaturation — remove if unwanted */
 }
 
-.bio-text {
-  flex: 1;
-  min-width: 260px;
+/* ============================================================
+   NAME (h1 inside .bio-text)
+   Uses Cormorant Garamond — elegant display font
+   font-weight: 400 keeps it light/refined (not bold)
+   ============================================================ */
+.bio-text h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.3rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.01em;
 }
 
+/* Position line below name (e.g. "PhD Candidate · IU Bloomington") */
+.bio-text .position {
+  font-size: 0.97rem;
+  color: var(--muted);
+  margin-bottom: 1.2rem;
+}
+
+/* Body paragraphs in the bio */
 .bio-text p {
-  font-size: 1.1em;
-  line-height: 1.6;
-  margin-top: 0;
+  font-size: 1rem;
+  margin-bottom: 0.85rem;
+  color: var(--text);
 }
 
-/* =========================
-   Inner pages (Research/Teaching/CV)
-========================= */
-.page {
-  max-width: 900px;
-  margin: 28px auto;
-  padding: 0 18px;
-  line-height: 1.6;
+/* Last paragraph (contact line) is slightly smaller and greyed */
+.bio-text p:last-child {
+  margin-top: 0.5rem;
+  font-size: 0.93rem;
+  color: var(--muted);
 }
 
-/* =========================
-   Research page
-========================= */
-.research-item {
-  margin-bottom: 22px;
+.bio-text a {
+  color: var(--accent);
+  text-decoration: none;
 }
 
-.research-item h2 {
-  margin-bottom: 5px;
+.bio-text a:hover { text-decoration: underline; }
+
+/* ============================================================
+   INNER PAGE LAYOUT (research.html, teaching.html, etc.)
+   Wrap your page content in <div class="page-content"> and
+   it will be centered and properly padded automatically
+   ============================================================ */
+.page-content {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
 }
 
-/* =========================
-   Teaching page
-========================= */
-.teaching-block {
-  margin-bottom: 22px;
+/* Section headings on inner pages (e.g. "Research", "Teaching") */
+.page-content h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--accent);            /* navy blue */
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.8rem;
+  letter-spacing: 0.03em;
 }
 
-.teaching-block h2 {
-  margin-bottom: 5px;
+/* Sub-labels (e.g. "Working Paper", "Instructor") */
+.page-content h3 {
+  font-size: 0.85rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+  margin-top: 1.8rem;
+  font-weight: 400;
 }
 
-.teaching-block ul {
-  margin-top: 10px;
+/* ============================================================
+   PAPER ENTRIES (for research.html)
+   Each paper is wrapped in <div class="paper">
+   ============================================================ */
+.paper {
+  margin-bottom: 2rem;
 }
 
+/* Paper title — italic */
+.paper-title {
+  font-style: italic;
+  font-size: 1.02rem;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+
+/* Status badge — "Working Paper" / "Work in Progress" */
+.paper-status {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+
+/* Short description under paper title */
+.paper-desc {
+  font-size: 0.97rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* Links under a paper (e.g. "Draft", "Slides") */
+.paper-links { margin-top: 0.4rem; font-size: 0.9rem; }
+.paper-links a { color: var(--accent); text-decoration: none; margin-right: 1rem; }
+.paper-links a:hover { text-decoration: underline; }
+
+/* ============================================================
+   ENTRY ROWS (teaching courses, conferences, awards)
+   Each row is <div class="entry">
+   Title on the left, date on the right
+   ============================================================ */
+.entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.45rem;
+  font-size: 0.98rem;
+}
+
+/* Right-side date/label — grey, no wrapping */
+.entry-right {
+  font-size: 0.9rem;
+  color: var(--muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Italic subtitle under a group of entries */
+.entry-sub {
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin-bottom: 0.9rem;
+}
+
+/* ============================================================
+   REFERENCES GRID
+   Two columns side by side.
+   Change grid-template-columns to 1fr for single column.
+   ============================================================ */
+.refs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2rem;
+  margin-top: 0.5rem;
+}
+
+.ref-card .ref-name { font-weight: 500; margin-bottom: 0.1rem; }
+.ref-card .ref-title { font-size: 0.92rem; color: var(--muted); line-height: 1.5; }
+.ref-card a { font-size: 0.9rem; color: var(--accent); text-decoration: none; }
+.ref-card a:hover { text-decoration: underline; }
+
+/* ============================================================
+   CV DOWNLOAD BUTTON
+   Outlined button style — fills with navy on hover
+   ============================================================ */
+.cv-btn {
+  display: inline-block;
+  margin-top: 0.4rem;
+  padding: 0.4rem 1.1rem;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.cv-btn:hover { background: var(--accent); color: #fff; }
+
+/* ============================================================
+   RESPONSIVE — for mobile screens under 580px
+   Photo stacks above text, references go single column
+   ============================================================ */
+@media (max-width: 580px) {
+  .bio-container { flex-direction: column; gap: 1.5rem; }
+  .bio-photo { width: 120px; height: 120px; }
+  .refs-grid { grid-template-columns: 1fr; }
+  nav a { margin: 0 0.8rem; font-size: 0.8rem; }
+}
