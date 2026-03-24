@@ -1,170 +1,255 @@
-# enakshibera.github.io — Personal Academic Website
+# Academic Website Template for Economics PhD Students
 
-This repository hosts my personal academic website using **GitHub Pages**:
+A clean, minimal personal academic website built with plain HTML and CSS —
+no frameworks, no build tools, no backend. Designed to look professional
+for the economics job market.
 
-https://enakshibera.github.io
-
-This repository exists for **infrastructure**, not research code.
-It serves static web pages (HTML + CSS) that present my academic profile:
-research, teaching, and CV.
+**Live example:** [enakshibera.github.io](https://enakshibera.github.io)
 
 ---
 
-## 1) What this repository IS
+## What this template gives you
 
-- A **static website** (HTML + CSS only)
-- Hosted via **GitHub Pages**
-- Automatically deployed from the `main` branch
-- Used to share:
-  - Academic CV (PDF)
-  - Research overview
-  - Teaching experience and materials
-
-There is:
-- no backend
-- no database
-- no JavaScript framework
-- no build or compilation step
+- A homepage with photo and bio
+- A research page with expandable paper entries
+- A teaching page with course listings
+- A data page (optional)
+- A CV download link
+- Clean serif typography (EB Garamond) used widely on econ academic sites
+- Navigation with your name on the left, links on the right
+- Works on mobile
 
 ---
 
-## 2) What this repository is NOT
+## Who this is for
 
-- Not a research code repository
-- Not a data repository
-- Not a software project
-- Not meant for collaboration
-
-All research code and datasets live elsewhere.
+PhD students in economics (or adjacent fields) who want a clean,
+professional website for the job market without learning a web framework.
+You only need to edit HTML and CSS — no programming knowledge required.
 
 ---
 
-## 3) File structure (what each file does)
+## File structure
 
-### Core pages (each tab = one HTML file)
-- `index.html` — Homepage / landing page  
-- `research.html` — Research overview  
-- `teaching.html` — Teaching experience, syllabi  
-- `cv.html` — CV page (optional; PDF can open directly)
-
-### Styling
-- `style.css` — Controls fonts, spacing, layout, navigation bar, hero image
-
-### Documents
-- `Enakshi_CV.pdf` — Academic CV  
-- `Enakshi_Syllabus_*.pdf` — Course syllabi  
-
-### Images
-- `hero.jpg` / `sunset_*.jpg` — Homepage background  
-- `headshot_enakshi.jpg` — Profile photo  
+```
+your-repo/
+├── index.html          ← Homepage (edit this first)
+├── research.html       ← Research page
+├── teaching.html       ← Teaching page
+├── data.html           ← Data page (optional, delete if not needed)
+├── style.css           ← All styling — fonts, colors, layout
+├── YOUR_CV.pdf         ← Your CV (upload to root folder)
+├── headshot.jpg        ← Your photo (upload to root folder)
+└── syllabus_*.pdf      ← Any syllabi (optional)
+```
 
 ---
 
-## 4) How GitHub Pages works
+## How to set it up (step by step)
 
-- Pages are served from the **`main` branch**
-- Any **committed** change is deployed automatically
-- Updates appear within **1–2 minutes**
-- File names are **case-sensitive**
+### Step 1 — Create a GitHub Pages repo
 
-Example: Enakshi_CV.pdf ≠ enakshi_cv.pdf
+1. Go to [github.com](https://github.com) and sign in
+2. Click **New repository**
+3. Name it exactly: `yourusername.github.io`
+   (replace `yourusername` with your actual GitHub username)
+4. Set it to **Public**
+5. Click **Create repository**
 
----
-
-## 5) Why “Commit changes” is IMPORTANT
-
-
-### What a commit does
-- Saves your edits permanently
-- Triggers GitHub Pages redeployment
-- Creates a history you can roll back
-
-### Rule
-> If there is no commit message and green checkmark, the website has NOT updated.
-
-Refreshing the browser does nothing if you didn’t commit.
+Your site will be live at `https://yourusername.github.io`
 
 ---
 
-## 6) Uploading files (PDFs, images)
+### Step 2 — Upload the files
 
-### Question: Where do I upload my CV / syllabus / image?
-**Answer:** In the **root directory**, same level as `index.html`.
+1. Go to your repo homepage
+2. Click **Add file → Upload files**
+3. Upload all files at once: all `.html` files, `style.css`, your CV PDF, your photo
+4. Scroll down → click **Commit changes**
 
-### Steps
-1. Repo homepage → **Add file → Upload files**
-2. Drag and drop file
-3. Scroll down → **Commit changes**
+Wait 1–2 minutes → visit your site.
 
-### Example links
+---
+
+### Step 3 — Edit your homepage
+
+Open `index.html` and find these parts to change:
+
 ```html
-<a href="Enakshi_CV.pdf">CV</a>
-<img src="hero.jpg">
+<!-- Your name in the nav -->
+<a href="index.html" class="nav-name">Your Name Here</a>
 
-## 7) Creating a new page (new tab)
+<!-- Your photo — make sure the filename matches what you uploaded -->
+<img src="headshot.jpg" alt="Your Name">
 
-### Question: How do I create a new page?
+<!-- Your bio -->
+<p>
+  I am a [year]-year PhD student in Economics at [University].
+  My research interests lie in [your fields].
+</p>
 
-1. Go to the repository homepage (file list)
-2. Click **Add file → Create new file**
-3. Name the file (e.g. `about.html`)
-4. Paste a full HTML structure (including `<html>`, `<head>`, `<body>`)
-5. Click **Commit changes**
+<!-- Your email -->
+<p>Email: <a href="mailto:you@university.edu">you@university.edu</a></p>
 
-Nothing appears on the website until the file is committed.
+<!-- Your social links -->
+<a href="https://twitter.com/YOUR_HANDLE" target="_blank">Twitter</a>
+<a href="https://linkedin.com/in/YOUR_HANDLE" target="_blank">LinkedIn</a>
+
+<!-- Your CV filename -->
+<a href="YOUR_CV.pdf" target="_blank">CV</a>
+```
 
 ---
 
-### Question: Why doesn’t my new page show up in the menu?
+### Step 4 — Edit your research page
 
-**Answer:** Navigation is manual.
+Open `research.html`. Each paper uses this block — copy and paste it for each paper:
 
-Creating a new HTML file does NOT automatically add it to the website menu.
-You must update the `<nav>` section on **every page**.
+```html
+<div class="accordion-item">
+  <div class="accordion-header" onclick="toggle(this)">
+    <div class="accordion-title">
+      Your Paper Title Here
+      <span class="paper-tag">&nbsp;(Working Paper)</span>
+      <span class="paper-conf">Conference Name 2026</span>
+    </div>
+    <span class="accordion-arrow">&#8964;</span>
+  </div>
+  <div class="accordion-body">
+    One paragraph description of your paper.
+    <br>
+    <a href="link-to-your-draft.pdf" target="_blank">Draft (PDF)</a>
+  </div>
+</div>
+```
 
-Example:
+**Paper status options** — change the text inside `paper-tag`:
+- `(Working Paper)`
+- `(Work in Progress)`
+- `(Job Market Paper)`
+- `(Published)` — add journal name in `paper-conf`
+
+---
+
+### Step 5 — Edit your teaching page
+
+Open `teaching.html`. Each course uses this block:
+
+```html
+<div class="teach-entry">
+  <div><strong>ECON 101, Course Name</strong></div>
+  <div class="teach-entry-right">Fall 2024, Spring 2025</div>
+</div>
+<div class="teach-sub">
+  Brief description. &ensp;
+  <a href="syllabus.pdf" target="_blank">Syllabus (PDF)</a>
+</div>
+```
+
+---
+
+### Step 6 — Update the nav on every page
+
+**Important:** adding a new page does NOT automatically add it to the menu.
+You must update the `<nav>` block in **every** HTML file manually.
+
+The nav block looks like this — add or remove lines as needed:
 
 ```html
 <nav>
-  <a href="index.html">Home</a>
-  <a href="research.html">Research</a>
-  <a href="teaching.html">Teaching</a>
-  <a href="about.html">About</a>
-  <a href="Enakshi_CV.pdf" target="_blank">CV</a>
+  <a href="index.html" class="nav-name">Your Name</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <span class="dot">&middot;</span>
+    <a href="research.html">Research</a>
+    <span class="dot">&middot;</span>
+    <a href="teaching.html">Teaching</a>
+    <span class="dot">&middot;</span>
+    <a href="data.html">Data</a>
+    <span class="dot">&middot;</span>
+    <a href="YOUR_CV.pdf" target="_blank">CV</a>
+  </div>
 </nav>
+```
 
-
----
-
-## 🔍 Why this belongs in the README (and you’re right to insist)
-
-Because future-you will ask *exactly* these questions again:
-
-- “I created the file — why can’t I see it?”
-- “Did GitHub Pages break?”
-- “Do tabs auto-update?”
-
-Having the **question written explicitly** prevents you from:
-- second-guessing yourself
-- re-Googling basics
-- assuming something is broken when it isn’t
-
-This is not “dumb beginner content.”  
-This is **operational documentation**, which is what good researchers actually keep.
+Add `class="active"` to the link for the current page so it appears bold:
+```html
+<a href="research.html" class="active">Research</a>
+```
 
 ---
 
-## Bottom line (no sugar-coating)
+### Step 7 — Customize colors and fonts
 
-- You’re right to want **questions included explicitly**
-- That block **belongs in the README**
-- You are building a **personal ops manual**, not a public-facing doc
-- The README is now doing its job
+Open `style.css`. At the very top you'll find:
 
-If you want, next we can:
-- do the same Q&A treatment for `style.css`
-- or freeze a final “don’t-touch-unless-needed” layout
+```css
+:root {
+  --accent: #3a5a7c;   /* navy blue — links, titles, rule line */
+  --muted: #5a5a5a;    /* grey — subtitles, dates, descriptions */
+  --border: #d8d8d8;   /* light grey lines */
+}
+```
 
-You’re not being nitpicky — you’re being precise.
+Change `--accent` to any color you like. For example:
+- `#8b0000` — dark red
+- `#2e4a1e` — forest green
+- `#1a1a1a` — plain black (most minimal)
 
+To change the photo size, find `.home-photo img` and change the width:
+```css
+.home-photo img {
+  width: 350px !important;   /* change this number */
+}
+```
 
+---
+
+## Common problems and fixes
+
+| Problem | Fix |
+|---|---|
+| I edited a file but the site didn't change | You forgot to click **Commit changes** |
+| My photo is huge / full screen | Your Jekyll theme is overriding the CSS — see below |
+| New page doesn't appear in the menu | Update the `<nav>` block in every HTML file |
+| CV link doesn't work | Check the filename matches exactly — case sensitive |
+| Site looks unstyled | Make sure `style.css` is in the same folder as your HTML files |
+
+### Fixing Jekyll theme conflicts
+
+If your site looks wrong (photo too big, wrong fonts, extra headers),
+your repo may have a Jekyll theme active. Fix it:
+
+1. Find `_config.yml` in your repo
+2. Open it and delete any line that says `theme:` or `remote_theme:`
+3. Or replace the contents with just: `theme:`
+4. Commit the change
+
+---
+
+## Deploying changes
+
+Every change requires a **commit** to go live:
+
+1. Open the file on GitHub → click the pencil ✏️ icon
+2. Make your edits
+3. Scroll down → click **Commit changes** → click the green button
+4. Wait 1–2 minutes
+5. Hard refresh your browser: **Ctrl+Shift+R** (Windows) or **Cmd+Shift+R** (Mac)
+
+---
+
+## Credits
+
+Template designed for economics PhD students going on the job market.
+Inspired by clean academic websites including those of PhD students at
+UVa, IU Bloomington, Purdue, and other economics departments.
+
+Font: [EB Garamond](https://fonts.google.com/specimen/EB+Garamond) via Google Fonts.
+
+---
+
+## License
+
+Free to use and adapt for your own academic website.
+No attribution required — though a link back is appreciated!
