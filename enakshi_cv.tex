@@ -1,0 +1,196 @@
+\documentclass[10pt, a4paper]{article}
+
+\usepackage[margin=1.0in, top=0.85in, bottom=0.85in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{palatino} %Font
+%\usepackage[sc]{mathpazo}
+\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=black}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Column widths
+\newlength{\lblwidth}
+\setlength{\lblwidth}{1.45in}
+\newlength{\cntwidth}
+\setlength{\cntwidth}{\dimexpr\textwidth - \lblwidth - 12pt\relax}
+
+% cvsec environment with more breathing room
+\newenvironment{cvsec}[1]{%
+  \vspace{8pt}%
+  \noindent%
+  \begin{minipage}[t]{\lblwidth}%
+    \raggedright\small\textsc{#1}%
+  \end{minipage}%
+  \hspace{6pt}%
+  \begin{minipage}[t]{\cntwidth}%
+    \raggedright%
+}{%
+  \end{minipage}\par\vspace{6pt}%
+}
+
+\setlist[itemize]{leftmargin=1em, nosep, topsep=2pt, itemsep=2pt}
+
+\begin{document}
+
+%% ---- HEADER ----
+\begin{center}
+  {\huge \textbf{Enakshi Bera}}
+\end{center}
+\vspace{4pt}
+
+\begin{tabular}{@{} p{0.48\textwidth} @{\hspace{0.04\textwidth}} p{0.48\textwidth} @{}}
+  Department of Economics        & \raggedleft E-mail: \href{mailto:enabera@iu.edu}{enabera@iu.edu} \tabularnewline
+  Indiana University Bloomington & \raggedleft \href{https://enakshibera.github.io}{enakshibera.github.io} \tabularnewline
+  100 S Woodlawn Ave             & \raggedleft Office: WY 307 \tabularnewline
+  Bloomington, IN 47405, USA     & \raggedleft She/Her/Hers \tabularnewline
+                                 & \raggedleft F-1 visa, STEM OPT eligible \tabularnewline
+\end{tabular}
+
+\vspace{1pt}
+\noindent\rule{\textwidth}{0.1pt}
+
+%% ---- RESEARCH INTERESTS ----
+\begin{cvsec}{Research\\Interests}
+International Trade, Agricultural Economics, Spatial Economics, Development Economics
+\end{cvsec}
+
+\noindent\rule{\textwidth}{0.2pt}
+
+%% ---- EDUCATION ----
+\begin{cvsec}{Education}
+\textbf{Indiana University Bloomington}, Bloomington, IN \\
+\textit{PhD in Economics} \hfill 2022--Present \\
+Expected May 2027 $|$ Advisor: Dr.\ Mostafa Beshkar
+
+\bigskip
+\textbf{Presidency University}, Kolkata, India \\
+\textit{MS in Applied Economics} \hfill 2018--2020 \\
+\textit{Project: What Happened After LAF?} Monetary policy transmission after liberalization using VAR models.
+
+\bigskip
+\textbf{Calcutta University}, Kolkata, India \\
+\textit{BS in Economics} \hfill 2015--2018
+\end{cvsec}
+
+\noindent\rule{\textwidth}{0.2pt}
+
+%% ---- RESEARCH ----
+\begin{cvsec}{Research}
+\textbf{Working Paper} \\[3pt]
+\textit{Barriers Within Borders: Port Access, Subsidy Asymmetry, and Fertilizer Nutrient Imbalance in India} \\
+Documents how geographic isolation from import ports distorts fertilizer nutrient composition across Indian districts under asymmetric subsidy regimes.
+
+\bigskip
+\textbf{Work in Progress} \\[3pt]
+\textit{Agricultural Shocks, Farm Exit, and Farmer Suicides in India}
+
+\end{cvsec}
+
+\noindent\rule{\textwidth}{0.2pt}
+
+%% ---- CONFERENCES ----
+\begin{cvsec}{Conferences}
+AAEA Annual Meeting, Kansas City, MO \hfill Summer 2026 \\
+\hspace{1em} \textit{Barriers Within Borders} 
+(Lightning Session, forthcoming)
+
+\bigskip
+3rd International Symposium on Work in Agriculture (ISWA) \hfill Summer 2026 
+\end{cvsec}
+
+\noindent\rule{\textwidth}{0.2pt}
+
+%% ---- RESEARCH EXPERIENCE ----
+\begin{cvsec}{Research\\Experience}
+\textbf{Indiana University Bloomington}, Bloomington, IN \\
+\textit{Research Assistant to Prof.\ Mostafa Beshkar} \hfill Jun--Aug 2024
+
+\bigskip
+\textbf{Kutumb Aspiration}, India \\
+\textit{Research Intern} \hfill Jun--Sep 2021 \\
+Conducted research on socio-economic development, focusing on caste-based discrimination in India. Designed and implemented surveys to support analytical models.
+\end{cvsec}
+
+\noindent\rule{\textwidth}{0.2pt}
+
+%% ---- TEACHING EXPERIENCE ----
+\begin{cvsec}{Teaching\\Experience}
+\textbf{Indiana University Bloomington}, Bloomington, IN \\[3pt]
+\textbf{Instructor}
+\begin{itemize}
+  \item ECON-B 252, Macroeconomics \hfill Summer 2024, Fall 2024, Spring 2025
+  \item ECON 331, International Trade \hfill Fall 2025
+\end{itemize}
+
+\medskip
+\textbf{Teaching Assistant}
+\begin{itemize}
+  \item ECON-B 251, Principles of Microeconomics \hfill Fall 2022, Spring 2023
+  \item ECON-C 104, Gender and Economics \hfill Spring 2024
+  \item ECON-B 252, Principles of Macroeconomics \hfill Spring 2025
+\end{itemize}
+\end{cvsec}
+
+\noindent\rule{\textwidth}{0.2pt}
+
+%% ---- OTHER PROFESSIONAL EXPERIENCE ----
+\begin{cvsec}{Other\\Experience}
+\textbf{KarvyNext Pvt.\ Ltd.}, India \\
+\textit{Assistant Regional Planner} \hfill Aug 2020--Mar 2021 \\
+Analyzed supply-chain data and developed performance metrics to improve operational efficiency; created reporting tools that increased agent performance by 10\%.
+
+\bigskip
+\textbf{Revidly}, Remote \\
+\textit{Data Analytics Intern} \hfill Apr--Jun 2020 \\
+Implemented machine-learning algorithms on large-scale datasets and developed a Python-based chatbot with a Tkinter GUI to enhance user engagement.
+\end{cvsec}
+
+\noindent\rule{\textwidth}{0.2pt}
+
+%% ---- FELLOWSHIPS AND AWARDS ----
+\begin{cvsec}{Fellowships\\and Awards}
+Frank T. Bachmura Award, Indiana University \hfill 2025; 2026 \\[4pt]
+Susan C. Thrasher Fellowship, Indiana University \hfill 2025 \\[4pt]
+Duesterberg Travel Award, Indiana University \hfill 2025 \\[4pt]
+Susan C. Thrasher Fellowship, Indiana University \hfill 2026 \\[4pt]
+\end{cvsec}
+
+\noindent\rule{\textwidth}{0.2pt}
+
+%% ---- TECHNICAL SKILLS ----
+\begin{cvsec}{Technical\\Skills}
+\textbf{Programming:} Stata (Advanced), Python (Intermediate), R (Basic), MATLAB (Basic), LaTeX (Advanced) \\[4pt]
+\textbf{GIS \& Spatial:} ArcGIS, QGIS, spatial data analysis  \\[4pt]
+\textbf{Methods:} Structural trade modeling, panel data econometrics, difference-in-differences
+\end{cvsec}
+
+\noindent\rule{\textwidth}{0.2pt}
+
+%% ---- LANGUAGES ----
+\begin{cvsec}{Languages}
+Bengali (Native), English (Fluent), Hindi, Spanish
+\end{cvsec}
+
+
+\noindent\rule{\textwidth}{0.2pt}
+
+%% ---- REFERENCES ----
+\begin{cvsec}{References}
+\begin{tabular}{@{} p{0.46\cntwidth} @{\hspace{0.04\cntwidth}} p{0.46\cntwidth} @{}}
+\textbf{Dr.\ Mostafa Beshkar} (Chair)     & \textbf{Dr.\ Gustavo Torrens} \\[2pt]
+Associate Professor of Economics          & Associate Professor of Economics \\
+Indiana University Bloomington            & Indiana University Bloomington \\
+\href{mailto:mbeshkar@iu.edu}{mbeshkar@iu.edu} & \href{mailto:gtorrens@iu.edu}{gtorrens@iu.edu} \\[10pt]
+\textbf{Dr.\ Volodomyr Lugovskyy}         & \\[2pt]
+Professor of Economics (Department Chair) & \\
+Indiana University Bloomington            & \\
+\href{mailto:vlugovsk@indiana.edu}{vlugovsk@indiana.edu} & \\
+\end{tabular}
+\end{cvsec}
+
+\end{document}
