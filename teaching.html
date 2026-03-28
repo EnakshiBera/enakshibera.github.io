@@ -5,6 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Teaching | Enakshi Bera</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .eval-note { font-size: 0.81rem; color: #777; margin: 0.4rem 0 1.4rem; font-style: italic; }
+    .eval-course { margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #e5e0d8; }
+    .eval-course:last-child { border-bottom: none; margin-bottom: 0; }
+    .eval-course-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.2rem; margin-bottom: 0.5rem; }
+    .eval-course-name { font-weight: 700; font-size: 0.93rem; }
+    .eval-course-meta { font-size: 0.79rem; color: #888; }
+    .eval-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; margin: 0.4rem 0 0.9rem; }
+    .eval-table th { text-align: left; font-weight: 600; color: #666; border-bottom: 1px solid #ccc; padding: 0.22rem 0.4rem 0.22rem 0; font-size: 0.73rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .eval-table th:nth-child(2), .eval-table th:nth-child(3) { text-align: center; }
+    .eval-table td { padding: 0.22rem 0.4rem 0.22rem 0; color: #333; border-bottom: 1px solid #ede9df; }
+    .eval-table td:nth-child(2), .eval-table td:nth-child(3) { text-align: center; font-variant-numeric: tabular-nums; }
+    .eval-table tr:last-child td { border-bottom: none; }
+    .eval-quotes { display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.6rem; }
+    .eval-quote { font-style: italic; font-size: 0.84rem; color: #555; margin: 0; padding: 0.35rem 0 0.35rem 0.85rem; border-left: 2px solid #c5b89a; line-height: 1.55; }
+  </style>
 </head>
 <body>
 
@@ -12,24 +28,23 @@
   <a href="index.html" class="nav-name">Enakshi Bera</a>
   <div class="nav-links">
     <a href="index.html">Home</a>
-    <span class="dot">&middot;</span>
+    <span class="nav-sep">·</span>
     <a href="research.html">Research</a>
-    <span class="dot">&middot;</span>
-    <a href="teaching.html" class="active">Teaching</a>
-    <span class="dot">&middot;</span>
+    <span class="nav-sep">·</span>
+    <a href="teaching.html" class="nav-active">Teaching</a>
+    <span class="nav-sep">·</span>
     <a href="data.html">Data</a>
-    <span class="dot">&middot;</span>
-    <a href="enakshi_cv.pdf" target="_blank">CV</a>
+    <span class="nav-sep">·</span>
+    <a href="cv.html">CV</a>
   </div>
 </nav>
 
-<div class="page-wrap">
-
+<main>
   <h1 class="page-title">Teaching</h1>
   <div class="page-rule"></div>
 
   <div class="teach-group">
-    <div class="teach-label">Instructor â Indiana University Bloomington</div>
+    <div class="teach-label">Instructor · Indiana University Bloomington</div>
 
     <div class="teach-entry">
       <div><strong>ECON-B 252, Macroeconomics</strong></div>
@@ -51,7 +66,7 @@
   </div>
 
   <div class="teach-group">
-    <div class="teach-label">Teaching Assistant â Indiana University Bloomington</div>
+    <div class="teach-label">Teaching Assistant · Indiana University Bloomington</div>
 
     <div class="teach-entry">
       <div>ECON-B 251, Principles of Microeconomics</div>
@@ -69,6 +84,101 @@
     </div>
   </div>
 
-</div>
+  <div class="teach-group">
+    <div class="teach-label">Course Evaluations · Indiana University Bloomington</div>
+    <p class="eval-note">University questions scored 1–4 (4 = best); departmental questions scored 1–5 (5 = best). Dept. avg. shown in parentheses.</p>
+
+    <div class="eval-course">
+      <div class="eval-course-header">
+        <span class="eval-course-name">ECON 331, International Trade — Fall 2025</span>
+        <span class="eval-course-meta">7 responses / 20 enrolled (35.0%)</span>
+      </div>
+      <table class="eval-table">
+        <thead><tr><th>Metric</th><th>Course</th><th>Dept.</th></tr></thead>
+        <tbody>
+          <tr><td>Overall teaching effectiveness</td><td>4.4 / 5</td><td>(3.8)</td></tr>
+          <tr><td>Enthusiasm about teaching</td><td>4.3 / 5</td><td>(3.9)</td></tr>
+          <tr><td>Preparation for class meetings</td><td>4.3 / 5</td><td>(4.0)</td></tr>
+          <tr><td>Providing helpful feedback</td><td>4.6 / 5</td><td>(3.6)</td></tr>
+          <tr><td>Instructor availability</td><td>3.9 / 4</td><td>(3.3)</td></tr>
+          <tr><td>Likelihood to recommend</td><td>3.7 / 4</td><td>(3.1)</td></tr>
+        </tbody>
+      </table>
+      <div class="eval-quotes">
+        <p class="eval-quote">“Professor Bera is one of the best instructors I’ve had at IU. She explains complex trade models with clarity, keeps the lectures structured, and always connects theory to current global issues.”</p>
+        <p class="eval-quote">“Her passion to teach about the topic was very clear.”</p>
+      </div>
+    </div>
+
+    <div class="eval-course">
+      <div class="eval-course-header">
+        <span class="eval-course-name">ECON-B 252, Macroeconomics — Spring 2025</span>
+        <span class="eval-course-meta">10 responses / 59 enrolled (16.9%)</span>
+      </div>
+      <table class="eval-table">
+        <thead><tr><th>Metric</th><th>Course</th><th>Dept.</th></tr></thead>
+        <tbody>
+          <tr><td>Overall teaching effectiveness</td><td>3.9 / 5</td><td>(3.8)</td></tr>
+          <tr><td>Enthusiasm about teaching</td><td>3.8 / 5</td><td>(4.0)</td></tr>
+          <tr><td>Preparation for class meetings</td><td>4.1 / 5</td><td>(4.1)</td></tr>
+          <tr><td>Providing helpful feedback</td><td>4.0 / 5</td><td>(3.7)</td></tr>
+          <tr><td>Instructor availability</td><td>3.4 / 4</td><td>(3.4)</td></tr>
+          <tr><td>Likelihood to recommend</td><td>3.1 / 4</td><td>(3.2)</td></tr>
+        </tbody>
+      </table>
+      <div class="eval-quotes">
+        <p class="eval-quote">“I loved Enakshi! She is very nice and encouraging and motivates us to do our best work. She understands Econ is difficult, and goes above and beyond to help us understand difficult concepts.”</p>
+        <p class="eval-quote">“Professor Bera explained things in an organized manner, allowing students to digest the material much easier. She did an excellent job coaching students, both individually and in group settings.”</p>
+      </div>
+    </div>
+
+    <div class="eval-course">
+      <div class="eval-course-header">
+        <span class="eval-course-name">ECON-B 252, Macroeconomics — Fall 2024</span>
+        <span class="eval-course-meta">18 responses / 57 enrolled (31.6%)</span>
+      </div>
+      <table class="eval-table">
+        <thead><tr><th>Metric</th><th>Course</th><th>Dept.</th></tr></thead>
+        <tbody>
+          <tr><td>Overall teaching effectiveness</td><td>3.4 / 5</td><td>(3.7)</td></tr>
+          <tr><td>Enthusiasm about teaching</td><td>3.4 / 5</td><td>(3.9)</td></tr>
+          <tr><td>Preparation for class meetings</td><td>3.6 / 5</td><td>(4.0)</td></tr>
+          <tr><td>Providing helpful feedback</td><td>3.6 / 5</td><td>(3.5)</td></tr>
+          <tr><td>Instructor availability</td><td>3.3 / 4</td><td>(3.3)</td></tr>
+          <tr><td>Likelihood to recommend</td><td>2.8 / 4</td><td>(3.1)</td></tr>
+        </tbody>
+      </table>
+      <div class="eval-quotes">
+        <p class="eval-quote">“The teacher was extremely welcoming, friendly, thoughtful, and thorough. I learned so much, while also looking forward to coming to class.”</p>
+        <p class="eval-quote">“Enakshi was very responsive via email and was always willing to join office hours. She really does want the best for her students.”</p>
+      </div>
+    </div>
+
+    <div class="eval-course">
+      <div class="eval-course-header">
+        <span class="eval-course-name">ECON-B 252, Macroeconomics — Summer 2024</span>
+        <span class="eval-course-meta">3 responses / 41 enrolled (7.3%)</span>
+      </div>
+      <table class="eval-table">
+        <thead><tr><th>Metric</th><th>Course</th><th>Dept.</th></tr></thead>
+        <tbody>
+          <tr><td>Overall teaching effectiveness</td><td>3.7 / 5</td><td>(4.1)</td></tr>
+          <tr><td>Enthusiasm about teaching</td><td>3.7 / 5</td><td>(4.0)</td></tr>
+          <tr><td>Preparation for class meetings</td><td>4.3 / 5</td><td>(4.1)</td></tr>
+          <tr><td>Ability to construct exams/quizzes</td><td>4.7 / 5</td><td>(4.1)</td></tr>
+          <tr><td>Instructor availability</td><td>3.3 / 4</td><td>(3.5)</td></tr>
+          <tr><td>Likelihood to recommend</td><td>3.7 / 4</td><td>(3.5)</td></tr>
+        </tbody>
+      </table>
+      <div class="eval-quotes">
+        <p class="eval-quote">“I really appreciated the flexibility that she provided to her students as we were all taking this during the summer. She structured the course in a way that was really easy to manage.”</p>
+        <p class="eval-quote">“Her commitment towards the class.”</p>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
 </body>
-</html>
+    </html>
